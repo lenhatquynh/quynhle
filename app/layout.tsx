@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={fonts.join(" ")}>
         {children}
         <Analytics mode={"production"} />;
+        <SpeedInsights />;
       </body>
     </html>
   );
