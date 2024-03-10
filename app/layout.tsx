@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fonts.join(" ")}>
-      {children}
-      <Analytics />
+        {children}
+        <Analytics mode={"production"} />;
       </body>
     </html>
   );
