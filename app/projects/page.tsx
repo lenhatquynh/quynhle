@@ -1,6 +1,5 @@
 import { allProjects } from "contentlayer/generated";
 import { Redis } from "@upstash/redis";
-
 import { Card } from "@/components/Card";
 import { Navigation } from "@/components/Nav";
 import { Article } from "./article";
@@ -21,7 +20,9 @@ export default async function Projects() {
 
   const featured = allProjects.find((project) => project.slug === "quynhle")!;
   const top2 = allProjects.find((project) => project.slug === "EClinic")!;
-  const top3 = allProjects.find((project) => project.slug === "EClinic_devops")!;
+  const top3 = allProjects.find(
+    (project) => project.slug === "EClinic_devops"
+  )!;
   const projects = allProjects
     .filter((p) => p.published)
     .filter(
@@ -35,8 +36,6 @@ export default async function Projects() {
         new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
         new Date(a.date ?? Number.POSITIVE_INFINITY).getTime()
     );
-
-  // const projects = allProjects.sort((a, b) => compareDesc(new Date(a.date || ''), new Date(b.date || '')))
 
   return (
     <div className="relative pb-16">
