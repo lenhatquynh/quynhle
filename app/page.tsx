@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Particles from "./components/Particles";
 import Image from "next/image";
-import {BrandName} from "@/components/BrandName";
+import BrandNameStyle2 from "@/components/BrandNameStyle2";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -36,28 +36,24 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in-1000"
         quantity={100}
       />
-      <BrandName />
+      <BrandNameStyle2 />
 
       <div className="my-16 text-center animate-fade-in mx-10 space-y-3 sm:mx-0 text-sm sm:text-xl">
-          <h2 className="text-zinc-500 ">
-              Hi! I&apos;m Quynh Le, a passionate web developer who loves turning
-              ideas into reality.
-              <br/>
-              Explore my portfolio to discover my skills, projects, and journey in
-              the world of web development.
-              <br/>
-              Let&apos;s connect and create something
-              amazing together!
-          </h2>
-          <h2 className="text-zinc-500 ">
-          I&apos;m building {" "}
+        <h2 className="text-zinc-500 ">
+          Hi! I&apos;m Quynh Le, a passionate web developer who loves turning
+          ideas into reality.
+          <br />
+          Let&apos;s connect and create something amazing together!
+        </h2>
+        <h2 className="text-zinc-500 ">
+          I&apos;m building{" "}
           <Link
-            href="/projects/EClinic_devops"
+            href="/projects/multi-snake-game"
             className="underline duration-500 hover:text-zinc-300"
           >
-            EClinic Devops
+            Multi Snake Game
           </Link>{" "}
-          COMING SOON
+          for relaxing after work
         </h2>
       </div>
     </div>

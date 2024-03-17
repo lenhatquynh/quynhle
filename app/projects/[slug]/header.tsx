@@ -9,6 +9,8 @@ type Props = {
     title: string;
     description: string;
     repository?: string;
+    ref?: string;
+    label?: string;
   };
 
   views: number;
@@ -20,8 +22,8 @@ export const Header: React.FC<Props> = ({ project, views }) => {
   const links: { label: string; href: string }[] = [];
   if (project.repository) {
     links.push({
-      label: "GitHub",
-      href: `https://github.com/${project.repository}`,
+      label: project.label || "GitHub",
+      href: `${project.ref}${project.repository}`,
     });
   }
   if (project.url) {

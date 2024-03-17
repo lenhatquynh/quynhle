@@ -1,8 +1,8 @@
 export default function BrandNameStyle2() {
-  const words = "quynhle".split("");
+  const words = "Quynh Le".split("");
   return (
     <div>
-      <h1 className=" z-10 font-extrabold text-5xl text-transparent duration-1000 bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
+      <h1 className="z-10 font-extrabold text-5xl text-transparent duration-1000 bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-7xl whitespace-nowrap bg-clip-text">
         {words.map((w, widx) => {
           const extra = widx ? widx * 0.4 : 0;
           const duration = 3 + extra + "s";

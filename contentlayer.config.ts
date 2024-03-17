@@ -12,6 +12,10 @@ export const Project = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+    label: {
+      type: "string",
+      required: true,
+    },
     description: {
       type: "string",
       required: true,
@@ -21,6 +25,10 @@ export const Project = defineDocumentType(() => ({
     },
     url: {
       type: "string",
+    },
+    ref: {
+      type: "string",
+      required: true,
     },
     repository: {
       type: "string",
